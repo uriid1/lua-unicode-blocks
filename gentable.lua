@@ -1,5 +1,5 @@
 local PATH = 'unidata'
-local BLOCK_PATH = PATH..'/Blocks.txt'
+local BLOCKS_PATH = PATH..'/Blocks.txt'
 local TABLE_PATH = PATH..'/uniTable.lua'
 
 --
@@ -8,7 +8,7 @@ local TABLE_PATH = PATH..'/uniTable.lua'
 --
 local unicodeBlocks = 'return {\n'
 
-for line in io.lines(BLOCK_PATH, "*l") do
+for line in io.lines(BLOCKS_PATH, "*l") do
   local firstChar = line:sub(1, 1)
   if firstChar == '#' or firstChar == '' then
     goto continue

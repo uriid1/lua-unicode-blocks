@@ -9,8 +9,6 @@
 local unicodeBlocks = require('unidata.uniTable')
 
 local function getChars(property)
-  -- local start = tonumber(property:match('^\\u{(.+)}%-'), 16)
-  -- local finish = tonumber(property:match('^\\u{.+}%-\\u{(.+)}'), 16)
   local start, finish = property:match('^(.+)%-(.+)$')
   start = tonumber(start)
   finish = tonumber(finish)
